@@ -7,21 +7,50 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		94078ACC1E5D09FC00E3C071 /* ShoppingListsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94078ACB1E5D09FC00E3C071 /* ShoppingListsTableViewController.swift */; };
+		94078AD01E5D0D8100E3C071 /* ListItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94078ACF1E5D0D8100E3C071 /* ListItemTableViewController.swift */; };
+		94078AD91E5D0F8600E3C071 /* ListItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94078AD81E5D0F8600E3C071 /* ListItemTableViewCell.swift */; };
+		94078ADB1E5D112100E3C071 /* ShoppingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94078ADA1E5D112100E3C071 /* ShoppingList.swift */; };
+		94078ADD1E5D117500E3C071 /* ShoppingListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94078ADC1E5D117500E3C071 /* ShoppingListTableViewCell.swift */; };
 		9479257C1E5D074900EDD39E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9479257B1E5D074900EDD39E /* AppDelegate.swift */; };
-		9479257E1E5D074900EDD39E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9479257D1E5D074900EDD39E /* ViewController.swift */; };
 		947925811E5D074900EDD39E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9479257F1E5D074900EDD39E /* Main.storyboard */; };
 		947925831E5D074900EDD39E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 947925821E5D074900EDD39E /* Assets.xcassets */; };
 		947925861E5D074900EDD39E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 947925841E5D074900EDD39E /* LaunchScreen.storyboard */; };
+		9479258F1E5D085B00EDD39E /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9479258D1E5D085B00EDD39E /* Realm.framework */; };
+		947925901E5D085B00EDD39E /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9479258D1E5D085B00EDD39E /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		947925911E5D085B00EDD39E /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9479258E1E5D085B00EDD39E /* RealmSwift.framework */; };
+		947925921E5D085B00EDD39E /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9479258E1E5D085B00EDD39E /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		947925931E5D085B00EDD39E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				947925921E5D085B00EDD39E /* RealmSwift.framework in Embed Frameworks */,
+				947925901E5D085B00EDD39E /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		94078ACB1E5D09FC00E3C071 /* ShoppingListsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingListsTableViewController.swift; sourceTree = "<group>"; };
+		94078ACF1E5D0D8100E3C071 /* ListItemTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListItemTableViewController.swift; sourceTree = "<group>"; };
+		94078AD81E5D0F8600E3C071 /* ListItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListItemTableViewCell.swift; sourceTree = "<group>"; };
+		94078ADA1E5D112100E3C071 /* ShoppingList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingList.swift; sourceTree = "<group>"; };
+		94078ADC1E5D117500E3C071 /* ShoppingListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingListTableViewCell.swift; sourceTree = "<group>"; };
 		947925781E5D074900EDD39E /* ShoppingList-2404.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ShoppingList-2404.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9479257B1E5D074900EDD39E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9479257D1E5D074900EDD39E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		947925801E5D074900EDD39E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		947925821E5D074900EDD39E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		947925851E5D074900EDD39E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		947925871E5D074900EDD39E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9479258D1E5D085B00EDD39E /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		9479258E1E5D085B00EDD39E /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				947925911E5D085B00EDD39E /* RealmSwift.framework in Frameworks */,
+				9479258F1E5D085B00EDD39E /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +69,8 @@
 		9479256F1E5D074900EDD39E = {
 			isa = PBXGroup;
 			children = (
+				9479258D1E5D085B00EDD39E /* Realm.framework */,
+				9479258E1E5D085B00EDD39E /* RealmSwift.framework */,
 				9479257A1E5D074900EDD39E /* ShoppingList-2404 */,
 				947925791E5D074900EDD39E /* Products */,
 			);
@@ -54,12 +87,16 @@
 		9479257A1E5D074900EDD39E /* ShoppingList-2404 */ = {
 			isa = PBXGroup;
 			children = (
+				94078ACB1E5D09FC00E3C071 /* ShoppingListsTableViewController.swift */,
+				94078ADC1E5D117500E3C071 /* ShoppingListTableViewCell.swift */,
+				94078ADA1E5D112100E3C071 /* ShoppingList.swift */,
 				9479257B1E5D074900EDD39E /* AppDelegate.swift */,
-				9479257D1E5D074900EDD39E /* ViewController.swift */,
 				9479257F1E5D074900EDD39E /* Main.storyboard */,
 				947925821E5D074900EDD39E /* Assets.xcassets */,
 				947925841E5D074900EDD39E /* LaunchScreen.storyboard */,
 				947925871E5D074900EDD39E /* Info.plist */,
+				94078ACF1E5D0D8100E3C071 /* ListItemTableViewController.swift */,
+				94078AD81E5D0F8600E3C071 /* ListItemTableViewCell.swift */,
 			);
 			path = "ShoppingList-2404";
 			sourceTree = "<group>";
@@ -74,6 +111,8 @@
 				947925741E5D074900EDD39E /* Sources */,
 				947925751E5D074900EDD39E /* Frameworks */,
 				947925761E5D074900EDD39E /* Resources */,
+				947925931E5D085B00EDD39E /* Embed Frameworks */,
+				947925941E5D087D00EDD39E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -132,13 +171,33 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		947925941E5D087D00EDD39E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework/strip-frameworks.sh\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		947925741E5D074900EDD39E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9479257E1E5D074900EDD39E /* ViewController.swift in Sources */,
+				94078ACC1E5D09FC00E3C071 /* ShoppingListsTableViewController.swift in Sources */,
+				94078ADB1E5D112100E3C071 /* ShoppingList.swift in Sources */,
+				94078AD91E5D0F8600E3C071 /* ListItemTableViewCell.swift in Sources */,
+				94078ADD1E5D117500E3C071 /* ShoppingListTableViewCell.swift in Sources */,
 				9479257C1E5D074900EDD39E /* AppDelegate.swift in Sources */,
+				94078AD01E5D0D8100E3C071 /* ListItemTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +321,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2BULHRS882;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "ShoppingList-2404/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.centennial.ShoppingList-2404";
@@ -275,6 +338,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2BULHRS882;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "ShoppingList-2404/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.centennial.ShoppingList-2404";
@@ -302,6 +369,7 @@
 				9479258C1E5D074900EDD39E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
