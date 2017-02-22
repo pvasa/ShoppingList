@@ -2,7 +2,7 @@
 //  ShoppingListTableViewCell.swift
 //  ShoppingList-2404
 //
-//  Created by Ryan on 2017-02-21.
+//  Created by Ryan on 2017-02-21. - 300872404
 //  Copyright © 2017 Centennial College. All rights reserved.
 //
 
@@ -10,7 +10,7 @@ import UIKit
 
 class ShoppingListTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var listName: UILabel!
+    @IBOutlet weak var listName: UILabel! // Name of the list - Label
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -2,7 +2,7 @@
 //  ListItemTableViewController.swift
 //  ShoppingList-2404
 //
-//  Created by Ryan on 2017-02-21.
+//  Created by Ryan on 2017-02-21. - 300872404
 //  Copyright © 2017 Centennial College. All rights reserved.
 //
 
@@ -19,15 +19,14 @@ class ListItemTableViewController: UITableViewController {
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return shoppingList != nil ? shoppingList!.count : 0
     }
 
+    // Load custom cell
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "itemCell", for: indexPath) as! ListItemTableViewCell
 
@@ -43,6 +42,7 @@ class ListItemTableViewController: UITableViewController {
         return true
     }
     
+    // Delete action on swipe
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let deleteAction = UITableViewRowAction(style: .default, title: "Delete") {
             (action, indexPath) in
@@ -51,6 +51,12 @@ class ListItemTableViewController: UITableViewController {
         return [deleteAction]
     }
     
+    // Show update alert
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        updateItem(at: indexPath.row)
+    }
+    
+    // Add new item
     func addItem(_ item: ListItem) {
         try! self.realm.write {
             shoppingList.append(item)
@@ -58,6 +64,7 @@ class ListItemTableViewController: UITableViewController {
         }
     }
     
+    //Delete item
     func deleteItem(at: Int) {
         try! self.realm.write {
             shoppingList.remove(objectAtIndex: at)
@@ -65,8 +72,50 @@ class ListItemTableViewController: UITableViewController {
         }
     }
     
+    // Update item
+    func updateItem(at: Int) {
+        let listItem = shoppingList[at]
+        
+        let alertController = UIAlertController(title: "Update item", message: "", preferredStyle: UIAlertControllerStyle.alert)
+        
+        let addAction = UIAlertAction(title: "Update", style: .default, handler: {
+            alert -> Void in
+            
+            let itemNameTF = alertController.textFields![0] as UITextField
+            let itemQtyTF = alertController.textFields![1] as UITextField
+            
+            let newListItem = ListItem()
+            if itemNameTF.text!.characters.count > 0 && itemQtyTF.text!.characters.count > 0 {
+                newListItem.name = itemNameTF.text!
+                newListItem.qty = Int(itemQtyTF.text!)!
+                self.deleteItem(at: at)
+                self.addItem(newListItem)
+            }
+        })
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: {
+            (action : UIAlertAction!) -> Void in
+            alertController.dismiss(animated: true, completion: nil)
+        })
+        
+        alertController.addTextField { (textField : UITextField!) -> Void in
+            textField.text = listItem.name
+        }
+        
+        alertController.addTextField { (textField : UITextField!) -> Void in
+            textField.keyboardType = .numberPad
+            textField.text = String(listItem.qty)
+        }
+        
+        alertController.addAction(addAction)
+        alertController.addAction(cancelAction)
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    // Action for add button
     @IBAction func addListItem(_ sender: UIBarButtonItem) {
-        let alertController = UIAlertController(title: "Create new list", message: "", preferredStyle: UIAlertControllerStyle.alert)
+        let alertController = UIAlertController(title: "Add new item", message: "", preferredStyle: UIAlertControllerStyle.alert)
         
         let addAction = UIAlertAction(title: "Add", style: .default, handler: {
             alert -> Void in
